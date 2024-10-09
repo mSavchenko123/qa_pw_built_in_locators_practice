@@ -1,1 +1,1 @@
-# qa_pw_built_in_locators
+Playwright: practice working with built in locators. 
