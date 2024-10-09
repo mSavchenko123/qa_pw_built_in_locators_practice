@@ -10,5 +10,5 @@ test('Sign in flow test', async ({ page }) => {
   6.  Click the “Your Feed” tab 
  */
 
-
+  await page.goto('https://coffee-cart.app/');
 });
