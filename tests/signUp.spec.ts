@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 
-test('Sign up flow test', async ({ page }) => {
+test('Successful `Sign up` flow test', async ({ page }) => {
  /*
   1. Open the Conduit registration page https://conduit.mate.academy/user/register
   2. Enter Username
