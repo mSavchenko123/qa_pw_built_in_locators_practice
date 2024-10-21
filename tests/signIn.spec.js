@@ -1,20 +1,13 @@
 import { test, expect } from '@playwright/test';
 
 test('Successful `Sign in` flow test', async ({ page }) => {
-
- await page.goto('https://conduit.mate.academy/user/login');
- await page.getByPlaceholder('Email'). fill('test_new_user@gmail.com');
- await page.getByPlaceholder('Password'). fill('newpass123!');
- await page.getByRole('button', { name: 'Sign in' }).click();
- await page.waitForURL('https://conduit.mate.academy/');
- await expect(page.getByText('Your Feed')).toBeVisible();
-
-  /*
-  7. Assert that the "Global Feed" tab is visible. Use .toBeVisible() method. 
-  8. Assert that the "Popular Feeds" section is visible. Use .toBeVisible() method. 
-  9. Assert that the "Home" link is not Hidden. Use not.toBeHidden() method. 
-  10. Assert the locator with text "No articles are here... yet." is visible. Use .toBeVisible() method. 
+   /*
+  1. Open the Conduit login page https://conduit.mate.academy/user/login
+  2. Enter the Email of existing user
+  3. Enter the Password of existing user
+  4. Click Sign in button
+  5. Wait for the Home page URL https://conduit.mate.academy
+  6. Click on 'Your Feed' tab
  */
-
 
 });

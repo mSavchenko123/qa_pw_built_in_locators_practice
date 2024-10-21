@@ -1,4 +1,5 @@
 import { test } from '@playwright/test';
+import { faker } from '@faker-js/faker';
 
 test('Successful `Sign up` flow test', async ({ page }) => {
  /*
@@ -12,9 +13,9 @@ test('Successful `Sign up` flow test', async ({ page }) => {
  */
 
   await page.goto('https://conduit.mate.academy/user/register'); 
-  await page.getByPlaceholder('Username'). fill('User1');
-  await page.getByPlaceholder('Email'). fill('test@gmail.com');
-  await page.getByPlaceholder('Password'). fill('newpass123!');
+  await page.getByPlaceholder('Username').fill(faker.person.firstName());
+  await page.getByPlaceholder('Email').fill(faker.internet.email());
+  await page.getByPlaceholder('Password').fill(faker.internet.password());
   await page.getByRole('button', { name: 'Sign up' }).click();
   await page.waitForURL('https://conduit.mate.academy/'); 
   await page.getByText('Your Feed').click();
